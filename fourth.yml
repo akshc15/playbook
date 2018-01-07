@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: install package for debain family
+    apt: pkg=apache2 state=installed 
+    ignore_errors: true
+  
+  - name: create directory at /root location
+    file: path=/root/test state=directory
+    ignore_errors: true

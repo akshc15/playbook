@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: create files on all client at /tmp
+      file: path=/tmp/devops state=touch
