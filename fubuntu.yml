@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: create files
+    file: path=/root/test state=touch
+- hosts: all
+  tasks:
+  - name: create directorires
+    file: path=/root/a state=directory 

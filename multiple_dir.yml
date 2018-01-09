@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+  - name: creating multiple directories
+    file: path=/root/a{{item}} state=directory
+    with_sequence: start=1 end=3 
